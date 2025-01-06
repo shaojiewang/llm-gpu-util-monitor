@@ -30,8 +30,8 @@ def nvml_tc_utils(func):
 
         gpm_metrics = nvmlGpmMetricsGet(gpm_metrics)
 
-        for i in range(NVML_GPM_METRIC_MAX):
-            print(gpm_metrics.metrics[i])
+        # for i in range(NVML_GPM_METRIC_MAX):
+        #     print(gpm_metrics.metrics[i])
 
         print(f"any  tensor util = {gpm_metrics.metrics[NVML_GPM_METRIC_ANY_TENSOR_UTIL-1]}")
         print(f"hmma tensor util = {gpm_metrics.metrics[NVML_GPM_METRIC_HMMA_TENSOR_UTIL-1]}")
